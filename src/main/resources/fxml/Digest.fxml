@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sergio.contenthelper.Digest">
+    <children>
+      <Button id="openFile" fx:id="openFile" layoutX="15.0" layoutY="80.0" mnemonicParsing="false" onAction="#openFileAction" text="Выбрать дайджест" />
+        <Button id="parse" fx:id="parse" disable="true" layoutX="153.0" layoutY="80.0" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="101.0" text="Обработать" />
+      <TextArea fx:id="textArea" layoutX="15.0" layoutY="180.0" onKeyReleased="#hasTextAction" prefHeight="441.0" prefWidth="847.0" wrapText="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="180.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextArea>
+      <TextField fx:id="firstImageLink" disable="true" layoutX="267.0" layoutY="80.0" prefHeight="25.0" prefWidth="320.0" promptText="Ссылка на первое изображение" />
+      <TextField fx:id="imageQuantity" disable="true" layoutX="606.0" layoutY="80.0" onKeyReleased="#checkForNumeric" prefHeight="25.0" prefWidth="55.0" />
+      <Button fx:id="imageInsertButton" disable="true" layoutX="680.0" layoutY="80.0" mnemonicParsing="false" onAction="#imageInsertAction" prefHeight="25.0" prefWidth="183.0" text="Добавить изображения" />
+      <Button fx:id="voteButton" disable="true" layoutX="680.0" layoutY="117.0" mnemonicParsing="false" onAction="#voteInsertAction" prefHeight="25.0" prefWidth="183.0" text="Добавить голосование" />
+      <Button fx:id="videoButton" disable="true" layoutX="478.0" layoutY="117.0" mnemonicParsing="false" onAction="#videoInsertAction" prefHeight="25.0" prefWidth="183.0" text="Добавить видеоматериалы" />
+      <Button fx:id="photogalleryButton" disable="true" layoutX="277.0" layoutY="117.0" mnemonicParsing="false" onAction="#photogalleryInsertAction" prefHeight="25.0" prefWidth="183.0" text="Добавить фотогалерею" />
+      <Label fx:id="photosAddedLabel" alignment="CENTER" layoutX="277.0" layoutY="149.0" prefHeight="17.0" prefWidth="183.0" text="Фотогалерея добавлена" textFill="#1bbf2c" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="videosAddedLabel" alignment="CENTER" layoutX="478.0" layoutY="149.0" prefHeight="17.0" prefWidth="183.0" text="Видеогалерея добавлена" textFill="#1bbf2c" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="voteAddedLabel" alignment="CENTER" layoutX="680.0" layoutY="149.0" prefHeight="17.0" prefWidth="183.0" text="Голосование добавлено" textFill="#1bbf2c" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="413.0" layoutY="14.0" text="Digest Maker" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Bookman Old Style" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutY="58.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <CheckBox fx:id="englishCheckBox" layoutX="15.0" layoutY="121.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="137.0" text="English version" />
+    </children>
+</AnchorPane>

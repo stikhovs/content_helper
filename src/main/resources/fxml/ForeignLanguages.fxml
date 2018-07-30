@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sergio.contenthelper.ForeignLanguagesController">
+   <children>
+      <Label alignment="CENTER" prefHeight="46.0" prefWidth="643.0" text="Slide Maker" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Bookman Old Style" size="38.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1.0" layoutY="45.0" prefHeight="0.0" prefWidth="643.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <TextField fx:id="imageLinkForeign" layoutX="36.0" layoutY="306.0" onKeyReleased="#showImage" prefHeight="73.0" prefWidth="362.0" promptText="Изображение" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="306.0" />
+      <Label layoutX="36.0" layoutY="278.0" prefHeight="17.0" prefWidth="146.0" text="Ссылка на изображение" />
+      <Button fx:id="readyButton" layoutX="36.0" layoutY="387.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="200.0" text="Готово">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Button>
+      <WebView fx:id="imageViewForeign" layoutX="418.0" layoutY="306.0" prefHeight="73.0" prefWidth="200.0" />
+      <TabPane layoutX="24.0" layoutY="51.0" prefHeight="217.0" prefWidth="596.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="51.0">
+        <tabs>
+          <Tab fx:id="tabENG" text="Английский">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="195.0" prefWidth="610.0">
+                     <children>
+                        <TextField fx:id="titleENG" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="570.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="subTitleENG" layoutX="14.0" layoutY="87.0" prefHeight="17.0" prefWidth="576.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="newsLinkENG" layoutX="15.0" layoutY="145.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="569.0" promptText="Ссылка на новость" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+                        <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+                        <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+                        <ImageView fx:id="markValidEng" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Checkmark.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="markInvalidEng" fitHeight="26.0" fitWidth="27.0" layoutX="127.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Xmark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tabDE" text="Немецкий">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="195.0" prefWidth="610.0">
+                     <children>
+                        <TextField fx:id="titleDE" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="570.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="subTitleDE" layoutX="14.0" layoutY="87.0" prefHeight="17.0" prefWidth="576.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="newsLinkDE" layoutX="15.0" layoutY="145.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="569.0" promptText="Ссылка на новость" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+                        <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+                        <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+                        <ImageView fx:id="markValidDe" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Checkmark.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="markInvalidDe" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Xmark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabESP" text="Испанский">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="195.0" prefWidth="610.0">
+                     <children>
+                        <TextField fx:id="titleESP" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="570.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="subTitleESP" layoutX="14.0" layoutY="87.0" prefHeight="17.0" prefWidth="576.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="newsLinkESP" layoutX="15.0" layoutY="145.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="569.0" promptText="Ссылка на новость" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+                        <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+                        <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+                        <ImageView fx:id="markValidEsp" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Checkmark.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="markInvalidEsp" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Xmark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabCH" text="Китайский">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="195.0" prefWidth="610.0">
+                     <children>
+                        <TextField fx:id="titleCH" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="570.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="subTitleCH" layoutX="14.0" layoutY="87.0" prefHeight="17.0" prefWidth="576.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="newsLinkCH" layoutX="15.0" layoutY="145.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="569.0" promptText="Ссылка на новость" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+                        <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+                        <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+                        <ImageView fx:id="markValidCh" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Checkmark.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="markInvalidCh" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Xmark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="tabAR" text="Арабский">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="195.0" prefWidth="610.0">
+                     <children>
+                        <TextField fx:id="titleAR" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="570.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="subTitleAR" layoutX="14.0" layoutY="87.0" prefHeight="17.0" prefWidth="576.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="6.0" />
+                        <TextField fx:id="newsLinkAR" layoutX="15.0" layoutY="145.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="569.0" promptText="Ссылка на новость" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="6.0" />
+                        <Label layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+                        <Label layoutX="14.0" layoutY="64.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+                        <Label layoutX="14.0" layoutY="121.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+                        <ImageView fx:id="markValidAr" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Checkmark.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="markInvalidEng4" fitHeight="26.0" fitWidth="27.0" layoutX="124.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../images/Xmark.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TabPane>
+      <Separator layoutX="3.0" layoutY="267.0" prefHeight="3.0" prefWidth="637.0" />
+   </children>
+</AnchorPane>

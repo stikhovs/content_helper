@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sergio.contenthelper.SlideMaker">
+   <children>
+      <Label alignment="CENTER" prefHeight="46.0" prefWidth="643.0" text="Slide Maker" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Bookman Old Style" size="38.0" />
+         </font>
+      </Label>
+      <Separator layoutX="1.0" layoutY="45.0" prefHeight="0.0" prefWidth="643.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <TextField fx:id="title" layoutX="22.0" layoutY="72.0" prefHeight="25.0" prefWidth="590.0" promptText="Введите заголовок новости" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="31.0" />
+      <TextField fx:id="subTitle" layoutX="22.0" layoutY="137.0" prefHeight="64.0" prefWidth="590.0" promptText="Введите подзаголовок новости" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="31.0" />
+      <TextField fx:id="newsLink" layoutX="22.0" layoutY="235.0" onKeyReleased="#isValidLink" prefHeight="25.0" prefWidth="590.0" promptText="Ссылка на новость (по умолчанию #)" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="31.0" />
+      <TextField fx:id="imageLink" layoutX="22.0" layoutY="295.0" onKeyReleased="#showImage" prefHeight="73.0" prefWidth="376.0" promptText="Изображение" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="245.0" AnchorPane.topAnchor="295.0" />
+      <Label layoutX="22.0" layoutY="48.0" prefHeight="17.0" prefWidth="100.0" text="Заголовок:" />
+      <Label layoutX="22.0" layoutY="109.0" prefHeight="17.0" prefWidth="137.0" text="Подзаголовок:" />
+      <Label layoutX="22.0" layoutY="210.0" prefHeight="17.0" prefWidth="137.0" text="Ссылка на новость:" />
+      <Label layoutX="22.0" layoutY="272.0" prefHeight="17.0" prefWidth="146.0" text="Ссылка на изображение" />
+      <Button fx:id="readyButton" layoutX="22.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="46.0" prefWidth="200.0" text="Готово">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Button>
+      <WebView fx:id="imageView" layoutX="412.0" layoutY="295.0" prefHeight="73.0" prefWidth="200.0" />
+      <Button layoutX="388.0" layoutY="388.0" mnemonicParsing="false" onAction="#foreignLanguageAction" prefHeight="46.0" prefWidth="224.0" text="Иностранные версии">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="digest" layoutX="240.0" layoutY="390.0" mnemonicParsing="false" onAction="#digestAction" prefHeight="46.0" prefWidth="128.0" text="Дайджест">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="validMark" fitHeight="25.0" fitWidth="29.0" layoutX="130.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/Checkmark.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="invalidMark" fitHeight="23.0" fitWidth="29.0" layoutX="136.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../images/Xmark.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

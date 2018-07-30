@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sergio.contenthelper.MultiLinks">
+    <children>
+      <TextField fx:id="linkField" layoutX="24.0" layoutY="44.0" prefHeight="25.0" prefWidth="455.0" promptText="ссылка должна содержать src или href" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="44.0">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label layoutX="24.0" layoutY="14.0" prefHeight="25.0" prefWidth="123.0" text="Вставьте ссылку:">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="24.0" layoutY="84.0" prefHeight="25.0" prefWidth="203.0" text="Конечное количество ссылок: ">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <TextField fx:id="quantity" layoutX="227.0" layoutY="84.0" prefHeight="25.0" prefWidth="53.0" promptText="10" text="1">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button fx:id="ready" layoutX="292.0" layoutY="84.0" mnemonicParsing="false" onAction="#multiplyAction" prefHeight="14.0" prefWidth="84.0" text="Готово">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="errorLabel" layoutX="122.0" layoutY="109.0" prefHeight="25.0" prefWidth="220.0" text="некорректное количество ссылок" textFill="RED" visible="false">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="resultPlace" layoutX="26.0" layoutY="121.0" prefHeight="250.0" prefWidth="455.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="26.0" AnchorPane.rightAnchor="23.0" AnchorPane.topAnchor="121.0" />
+      <CheckBox fx:id="checkBox" layoutX="388.0" layoutY="80.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="243.0" text="Не повышать номер альбома">
+         <font>
+            <Font size="14.0" />
+         </font></CheckBox>
+   </children>
+</AnchorPane>
