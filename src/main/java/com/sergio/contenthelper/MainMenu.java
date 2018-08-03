@@ -85,6 +85,8 @@ public class MainMenu implements Initializable {
             stage.setScene(new Scene(root));
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(((Node)event.getSource()).getScene().getWindow());
+            stage.setMinWidth(608.0);
+            stage.setMinHeight(444.0);
             stage.show();
         } catch (IOException ex) {
             ex.printStackTrace();

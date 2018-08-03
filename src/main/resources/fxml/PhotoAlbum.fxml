@@ -25,6 +25,6 @@
          <font>
             <Font name="Bookman Old Style" size="16.0" />
          </font></Button>
-      <AnchorPane fx:id="resultPlace" layoutX="39.0" layoutY="242.0" prefHeight="190.0" prefWidth="528.0" />
+      <AnchorPane fx:id="resultPlace" layoutX="39.0" layoutY="242.0" prefHeight="190.0" prefWidth="528.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="245.0" />
     </children>
 </AnchorPane>
