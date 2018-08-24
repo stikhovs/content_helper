@@ -61,11 +61,6 @@ public class TablesIPP implements Initializable {
         panes.clear(); 
         tableNames.clear();        
         FileChooser fc = new FileChooser();
-        
-//        File startPath = new File("C:\\Users\\tihov\\Desktop\\Today");
-//        if (!startPath.exists()) {
-//          startPath = new File("C:\\Users\\All\\Desktop\\");
-//        }
         System.out.println(path);
         try (Stream<String> lineStream = Files.lines(path)) {
             lines = lineStream.collect(Collectors.toList());
@@ -109,9 +104,7 @@ public class TablesIPP implements Initializable {
         
         Accordion accordion = new Accordion();
         
-        for(int filePathNum = 0; filePathNum < chosenFiles.size(); filePathNum++){           
-            
-            
+        for(int filePathNum = 0; filePathNum < chosenFiles.size(); filePathNum++){      
             
             List<String> htmlElements = new ArrayList();
             htmlElements.add("<div id=\"area\">\n\t");
@@ -121,9 +114,7 @@ public class TablesIPP implements Initializable {
                 // открываем файл и считываем его содержимое в объект XWPFDocument
                 XWPFDocument docxFile = new XWPFDocument(OPCPackage.open(fileInputStream));
                 XWPFHeaderFooterPolicy headerFooterPolicy = new XWPFHeaderFooterPolicy(docxFile);
-
                 
-
                 // печатаем содержимое всех параграфов документа в консоль
                 List<XWPFParagraph> paragraphs = docxFile.getParagraphs();
                 for (XWPFParagraph p : paragraphs) {
